@@ -10,10 +10,7 @@ class EmailParser
     @emails = emails
   end
   def parse
-      @@emails = @emails.split(/[,\s]/).reject(&:empty?)
+      @@emails = @emails.split(/[,\s]/).reject(&:empty?).uniq
       @@emails
-  end
-  def self.all
-    @@emails
   end
 end

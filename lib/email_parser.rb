@@ -8,9 +8,9 @@ class EmailParser
   def initialize(emails)
     parse(emails)
   end
-  def parse(emails)
+  def self.parse(emails)
       @@emails = emails.split(/[,\s]/)
-      self.all
+      @@emails
   end
   def self.all
     @@emails
